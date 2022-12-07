@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp1.SearchWine"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="SearchWine" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF8BF96D"/>
+                <GradientStop Color="White" Offset="0.462"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DataGrid Name="Wines" Margin="156,52,111,51" AutoGenerateColumns="False"  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Вино" Width="200" Binding="{Binding TitleWine}"/>
+                <DataGridTextColumn Header="Сорт" Width="200" Binding="{Binding Grade}"/>
+                <DataGridTextColumn Header="Цена" Width="150" Binding="{Binding Price}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="32" Width="73" Background="#FFBFE9F3"/>
+    </Grid>
+</Window>
